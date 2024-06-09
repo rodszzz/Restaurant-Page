@@ -5,6 +5,9 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
+    initial: "./src/initialPageLoad.js",
+    recipes: "./src/pageRecipes.js",
+    about: "./src/about.js",
   },
   devtool: "inline-source-map",
   devServer: {

@@ -1,14 +1,30 @@
 import "./style.css";
+import pageLoad from "./initialPageLoad";
+import pageRecipes from "./pageRecipes";
+import pageAbout from "./about";
 
 console.log("working???");
-console.log("working second time");
 
-function mainComponent() {
-  const element = document.createElement("div");
+// function doThing() {}
 
-  element.innerHTML = `<a href="https://instagram.com/pitayaq" class="linkFoda">pitaya</a> CLICKA AGORA`;
+// por exemplo quando for mudar algo no DOM faz no doThing() e dá um append aqui
+document.body.appendChild(pageLoad());
 
-  return element;
-}
+const but1 = document.getElementById("but1");
+const initialPage = document.getElementsByClassName("initial-page");
+const but2 = document.getElementById("but2");
+const but3 = document.getElementById("but3");
 
-document.body.appendChild(mainComponent());
+but1.addEventListener("click", () => {
+  document.body.removeChild(initialPage);
+  document.body.appendChild(pageRecipes());
+});
+
+but2.addEventListener("click", () => {
+  document.body.appendChild(pageRecipes());
+});
+
+but3.addEventListener("click", () => {
+  // doOtherStuff
+  document.body.appendChild(pageAbout());
+});
