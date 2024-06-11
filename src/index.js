@@ -1,30 +1,31 @@
 import "./style.css";
-import pageLoad from "./initialPageLoad";
+import pageHome from "./pageHome";
 import pageRecipes from "./pageRecipes";
-import pageAbout from "./about";
+import pageAbout from "./pageAbout";
+
+// read this to more information about tab pages
+// https://www.w3schools.com/howto/howto_js_tabs.asp
+
+// see this video and try to implement it with separate js files
+// https://youtu.be/5L6h_MrNvsk?si=5OTVW5obOg9z9nKb
 
 console.log("working???");
 
-// function doThing() {}
+// function doThing() {
+//   // pageHome();
+// }
 
 // por exemplo quando for mudar algo no DOM faz no doThing() e dá um append aqui
-document.body.appendChild(pageLoad());
+const content = document.getElementById("content");
+content.appendChild(pageHome());
+content.appendChild(pageRecipes());
 
 const but1 = document.getElementById("but1");
-const initialPage = document.getElementsByClassName("initial-page");
 const but2 = document.getElementById("but2");
 const but3 = document.getElementById("but3");
 
-but1.addEventListener("click", () => {
-  document.body.removeChild(initialPage);
-  document.body.appendChild(pageRecipes());
-});
+but1.addEventListener("click", () => {});
 
-but2.addEventListener("click", () => {
-  document.body.appendChild(pageRecipes());
-});
+// but2.addEventListener("click", () => {});
 
-but3.addEventListener("click", () => {
-  // doOtherStuff
-  document.body.appendChild(pageAbout());
-});
+// but3.addEventListener("click", () => {});

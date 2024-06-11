@@ -1,1 +1,28 @@
+html {
+  padding: 0;
+  margin: 0;
+}
 
+header {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.active {
+  display: block;
+}
