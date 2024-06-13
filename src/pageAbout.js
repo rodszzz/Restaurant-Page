@@ -1,14 +1,10 @@
-function pageAbout() {
-  const about = document.createElement("div");
+const pageAbout = document.createElement("div");
+pageAbout.classList.add("tabcontent");
+pageAbout.setAttribute("id", "about");
 
-  about.innerHTML = `
-    <div class="tabcontent" id="about">
-      <h3>esse com certeza é um dos restaurantes.</h3>
-      <p>aqui nois fazemo comida!</p>
-    </div>
-  `;
-
-  return about;
-}
+pageAbout.innerHTML = `
+  <h3>esse com certeza é um dos restaurantes.</h3>
+  <p>aqui nois fazemo comida!</p>
+`;
 
 export default pageAbout;
