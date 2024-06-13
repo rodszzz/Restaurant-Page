@@ -23,10 +23,9 @@ const but1 = document.getElementById("but1");
 const but2 = document.getElementById("but2");
 const but3 = document.getElementById("but3");
 
-// const pag1 = document.getElementById("home");
-// content.appendChild(pageHome());
-
-// const pagHomeFoda = document.getElementById("home");
+// assim a pagina home sempre aparece quando vc inicia a pagina
+pageHome.classList.add("active");
+content.appendChild(pageHome);
 
 but1.addEventListener("click", () => {
   if (pageRecipes.classList.contains("active")) {
